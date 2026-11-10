@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz cumpleaños! 🎀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="musica" loop>
+        <source src="./musica/cumple.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PANTALLA INICIAL -->
+    <section id="inicio" class="pantalla-inicio">
+        <div class="decoracion decoracion-uno">🌸</div>
+        <div class="decoracion decoracion-dos">🎀</div>
+        <div class="decoracion decoracion-tres">✨</div>
+
+        <div class="caja-inicio">
+            <div class="hello-inicio">🎀</div>
+            <p class="subtitulo">Tengo una sorpresa para ti</p>
+            <h1>¡Feliz cumpleaños!</h1>
+            <p class="descripcion">Preparé algo especial con mucho cariño.</p>
+
+            <div class="regalo-cerrado">🎁</div>
+
+            <button id="abrirRegalo" class="boton-principal">
+                Abrir mi regalo 💗
+            </button>
+        </div>
+    </section>
+
+    <!-- ESCENARIO PRINCIPAL -->
+    <main id="escenario" class="escenario oculto">
+
+        <header class="encabezado">
+            <span class="etiqueta">UN DÍA MUY ESPECIAL</span>
+            <h1>¡Feliz cumpleaños, mi amor! 🎀</h1>
+            <p>Hoy el mundo tiene una razón más para sonreír.</p>
+        </header>
+
+        <!-- ILUSTRACIÓN -->
+        <div class="ilustracion">
+            <div class="nube nube-uno">☁️</div>
+            <div class="nube nube-dos">☁️</div>
+            <div class="mariposa">🦋</div>
+
+            <div class="hello-kitty">
+                <div class="orejas">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="cabeza-kitty">
+                    <div class="lazo">🎀</div>
+
+                    <div class="ojos">
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="nariz"></div>
+                    <div class="bigotes izquierda">〰</div>
+                    <div class="bigotes derecha">〰</div>
+                    <div class="vestido">💗</div>
+                </div>
+            </div>
+
+            <div class="flores">🌷 🌼 🌷 🌸 🌼</div>
+        </div>
+
+        <!-- TARJETAS -->
+        <section class="mensajes">
+            <h2>Unas pequeñas sorpresas para ti</h2>
+            <p class="instruccion">Toca cada regalito para descubrirlo 💌</p>
+
+            <div class="tarjetas">
+                <button class="tarjeta" data-mensaje="carta">
+                    <span class="tarjeta-icono">💌</span>
+                    <span>Una cartita</span>
+                </button>
+
+                <button class="tarjeta" data-mensaje="deseo">
+                    <span class="tarjeta-icono">⭐</span>
+                    <span>Un deseo</span>
+                </button>
+
+                <button class="tarjeta" data-mensaje="regalo">
+                    <span class="tarjeta-icono">🎁</span>
+                    <span>Un regalito</span>
+                </button>
+
+                <button class="tarjeta" data-mensaje="corazon">
+                    <span class="tarjeta-icono">💗</span>
+                    <span>De corazón</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- TORTA REDISEÑADA -->
+        <section class="seccion-torta">
+            <h2>¡Y que no falte la torta! 🎂</h2>
+            <p>Pide un deseo antes de apagar las velitas. 💗</p>
+
+            <div class="torta">
+
+                <div class="llamas" id="velitas">
+                    <span>🔥</span>
+                    <span>🔥</span>
+                    <span>🔥</span>
+                </div>
+
+                <div class="velas">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="decoracion-torta">
+                    <span>🍓</span>
+                    <span>🍓</span>
+                    <span>🍓</span>
+                </div>
+
+                <div class="capa-superior"></div>
+                <div class="crema-torta"></div>
+                <div class="capa-inferior"></div>
+                <div class="base-torta"></div>
+
+            </div>
+
+            <button id="apagarVelas" class="boton-principal">
+                Apagar las velitas ✨
+            </button>
+
+            <p id="mensajeDeseo" class="mensaje-deseo"></p>
+        </section>
+
+        <button id="abrirCarta" class="boton-carta">
+            💗 Leer una última sorpresita
+        </button>
+
+        <footer>
+            Hecho con mucho cariño para ti. 🎀
+        </footer>
+
+    </main>
+
+    <!-- MODAL DE MENSAJES -->
+    <div id="modalMensaje" class="modal">
+        <div class="modal-contenido">
+            <button class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <div id="modalIcono" class="modal-icono">💌</div>
+            <h2 id="modalTitulo">Un mensaje para ti</h2>
+            <p id="modalTexto"></p>
+        </div>
+    </div>
+
+    <!-- CARTA FINAL -->
+    <div id="modalCarta" class="modal">
+        <div class="carta-contenido">
+            <button class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <div class="modal-icono">🎀</div>
+            <h2>Una última cosita...</h2>
+
+            <p>
+                ¡Feliz cumpleaños, mi amor! 💗
+                <br><br>
+                Espero que este nuevo año de vida esté lleno de momentos
+                bonitos, muchas sonrisas, sueños cumplidos y personas
+                que te hagan feliz.
+                <br><br>
+                Que nunca te falten motivos para brillar, que cada día
+                encuentres algo por lo que sonreír y que la vida te
+                sorprenda con cosas maravillosas.
+                <br><br>
+                Disfruta muchísimo tu día. Te mereces todo lo bonito
+                que existe.
+                <br><br>
+                Con mucho cariño,
+                <br>
+                <strong>Jhey 💗</strong>
+            </p>
+        </div>
+    </div>
+
+    <div id="lluviaConfeti"></div>
+
+    <!-- BOTÓN DE MÚSICA -->
+    <button id="botonMusica" class="boton-musica" aria-label="Reproducir música">
+        <span id="iconoMusica">♫</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,704 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #fff5f8;
+    color: #75495d;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* PANTALLA INICIAL */
+
+.pantalla-inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe5ee, #fff8fa, #fce4ec);
+}
+
+.caja-inicio {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    max-width: 450px;
+    padding: 45px 25px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(190, 120, 150, 0.18);
+    border: 2px solid #fff;
+    z-index: 2;
+}
+
+.hello-inicio {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    color: #c18a9f;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.caja-inicio h1 {
+    font-size: 32px;
+    color: #d77e9f;
+    margin: 15px 0;
+}
+
+.descripcion {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.regalo-cerrado {
+    font-size: 90px;
+    margin: 25px 0;
+    animation: flotar 2s infinite ease-in-out;
+}
+
+.boton-principal {
+    border: none;
+    background: #e99ab6;
+    color: white;
+    padding: 14px 27px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(215, 126, 159, 0.25);
+    transition: 0.3s;
+}
+
+.boton-principal:hover {
+    background: #d77e9f;
+    transform: translateY(-3px);
+}
+
+.decoracion {
+    position: absolute;
+    font-size: 35px;
+    animation: flotar 3s infinite ease-in-out;
+}
+
+.decoracion-uno {
+    top: 15%;
+    left: 12%;
+}
+
+.decoracion-dos {
+    top: 20%;
+    right: 13%;
+}
+
+.decoracion-tres {
+    bottom: 15%;
+    left: 18%;
+}
+
+/* ESCENARIO */
+
+.escenario {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.encabezado {
+    margin-bottom: 20px;
+}
+
+.etiqueta {
+    color: #c18a9f;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.encabezado h1 {
+    color: #d77e9f;
+    font-size: 35px;
+    margin: 12px 0;
+}
+
+.encabezado p {
+    color: #956b7d;
+    font-size: 16px;
+}
+
+/* ILUSTRACIÓN */
+
+.ilustracion {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto 35px;
+    background: linear-gradient(#fce8f0, #fff3f6);
+    border-radius: 35px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nube {
+    position: absolute;
+    font-size: 48px;
+    opacity: 0.8;
+}
+
+.nube-uno {
+    top: 20px;
+    left: 35px;
+}
+
+.nube-dos {
+    top: 55px;
+    right: 35px;
+}
+
+.mariposa {
+    position: absolute;
+    right: 23%;
+    top: 30%;
+    font-size: 30px;
+    animation: flotar 2.5s infinite ease-in-out;
+}
+
+.hello-kitty {
+    position: relative;
+    width: 170px;
+    height: 190px;
+    margin-top: 30px;
+}
+
+.orejas {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.orejas span {
+    width: 50px;
+    height: 60px;
+    background: white;
+    border: 3px solid #e8c2cf;
+    border-radius: 50% 50% 10% 10%;
+    transform: rotate(-25deg);
+}
+
+.orejas span:last-child {
+    transform: rotate(25deg);
+}
+
+.cabeza-kitty {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    width: 160px;
+    height: 125px;
+    background: white;
+    border: 3px solid #e8c2cf;
+    border-radius: 48% 48% 45% 45%;
+    z-index: 2;
+}
+
+.lazo {
+    position: absolute;
+    top: -15px;
+    right: 12px;
+    font-size: 42px;
+}
+
+.ojos {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 42px 0;
+}
+
+.ojos span {
+    display: block;
+    width: 9px;
+    height: 14px;
+    background: #51404a;
+    border-radius: 50%;
+}
+
+.nariz {
+    width: 12px;
+    height: 9px;
+    background: #f0c35e;
+    border-radius: 50%;
+    margin: 8px auto 0;
+}
+
+.bigotes {
+    position: absolute;
+    top: 75px;
+    font-size: 22px;
+    color: #9c8290;
+}
+
+.izquierda {
+    left: -10px;
+}
+
+.derecha {
+    right: -10px;
+}
+
+.vestido {
+    position: absolute;
+    bottom: -60px;
+    left: 40px;
+    width: 80px;
+    height: 65px;
+    background: #f5b4ca;
+    border-radius: 25px 25px 12px 12px;
+    border: 2px solid #e8c2cf;
+    font-size: 24px;
+    padding-top: 17px;
+}
+
+.flores {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 26px;
+    letter-spacing: 5px;
+}
+
+/* TARJETAS */
+
+.mensajes {
+    margin: 35px 0;
+}
+
+.mensajes h2,
+.seccion-torta h2 {
+    color: #d77e9f;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.instruccion {
+    color: #a77c8d;
+    margin-bottom: 25px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.tarjeta {
+    border: 2px solid #f7dce6;
+    background: white;
+    border-radius: 22px;
+    padding: 22px 10px;
+    color: #956b7d;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(190, 120, 150, 0.08);
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    background: #fff0f5;
+    border-color: #e99ab6;
+}
+
+.tarjeta-icono {
+    display: block;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+/* SECCIÓN DE LA TORTA */
+
+.seccion-torta {
+    margin: 55px auto 35px;
+    padding: 35px 15px;
+    background: #fff0f5;
+    border-radius: 30px;
+}
+
+.seccion-torta p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* TORTA DE DOS PISOS */
+
+.torta {
+    position: relative;
+    width: 280px;
+    height: 230px;
+    margin: 35px auto 20px;
+}
+
+/* BASE */
+
+.base-torta {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    width: 250px;
+    height: 20px;
+    background: #e8a0b9;
+    border-radius: 50%;
+}
+
+/* CAPA INFERIOR */
+
+.capa-inferior {
+    position: absolute;
+    bottom: 28px;
+    left: 35px;
+    width: 210px;
+    height: 75px;
+    background: linear-gradient(90deg, #f3a7c0, #ffd0df, #f3a7c0);
+    border-radius: 12px 12px 22px 22px;
+    border: 2px solid #e99ab6;
+}
+
+/* CAPA SUPERIOR */
+
+.capa-superior {
+    position: absolute;
+    bottom: 100px;
+    left: 65px;
+    width: 150px;
+    height: 55px;
+    background: linear-gradient(90deg, #f8bfd1, #ffe0e9, #f8bfd1);
+    border-radius: 12px 12px 8px 8px;
+    border: 2px solid #e99ab6;
+}
+
+/* CREMA */
+
+.crema-torta {
+    position: absolute;
+    bottom: 145px;
+    left: 60px;
+    width: 160px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #f4d3df;
+    z-index: 2;
+}
+
+.crema-torta::before,
+.crema-torta::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    width: 18px;
+    height: 25px;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+.crema-torta::before {
+    left: 25px;
+}
+
+.crema-torta::after {
+    right: 25px;
+}
+
+/* FRESAS */
+
+.decoracion-torta {
+    position: absolute;
+    z-index: 4;
+    bottom: 151px;
+    left: 75px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+/* VELAS */
+
+.velas {
+    position: absolute;
+    z-index: 5;
+    bottom: 163px;
+    left: 87px;
+    width: 106px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.velas span {
+    display: block;
+    width: 12px;
+    height: 35px;
+    border-radius: 4px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff 0,
+        #fff 5px,
+        #e99ab6 5px,
+        #e99ab6 10px
+    );
+}
+
+/* LLAMAS */
+
+.llamas {
+    position: absolute;
+    z-index: 6;
+    bottom: 194px;
+    left: 79px;
+    width: 122px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 21px;
+    transition: 0.3s;
+}
+
+.llamas.apagadas {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+
+.mensaje-deseo {
+    color: #d77e9f;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+/* BOTÓN CARTA */
+
+.boton-carta {
+    background: #fff;
+    color: #d77e9f;
+    border: 2px solid #f1c7d6;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px 0 35px;
+    transition: 0.3s;
+}
+
+.boton-carta:hover {
+    background: #ffe5ee;
+    transform: scale(1.04);
+}
+
+footer {
+    color: #b58a9c;
+    font-size: 13px;
+    padding: 20px 0;
+}
+
+/* MODALES */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(75, 43, 59, 0.58);
+    backdrop-filter: blur(6px);
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.modal-contenido,
+.carta-contenido {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+    max-height: 85vh;
+    overflow-y: auto;
+    margin: auto;
+    padding: 45px 30px 35px;
+    background: #fffafc;
+    border: 2px solid #f7dce6;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(50, 20, 35, 0.2);
+    animation: aparecer 0.3s ease;
+}
+
+.modal-icono {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.modal-contenido h2,
+.carta-contenido h2 {
+    color: #d77e9f;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.modal-contenido p,
+.carta-contenido p {
+    color: #815b6d;
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: normal;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ffeaf1;
+    color: #c47e99;
+    font-size: 27px;
+    line-height: 1;
+}
+
+.cerrar-modal:hover {
+    background: #f8d4e1;
+}
+
+/* MÚSICA Y CONFETI */
+
+.boton-musica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #e99ab6;
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 5px 15px rgba(190, 120, 150, 0.3);
+}
+
+.confeti {
+    position: fixed;
+    top: -20px;
+    z-index: 10000;
+    pointer-events: none;
+    animation: caer 3s linear forwards;
+}
+
+/* ANIMACIONES */
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+    .escenario {
+        padding: 35px 15px;
+    }
+
+    .encabezado h1 {
+        font-size: 28px;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .tarjeta {
+        padding: 20px 8px;
+    }
+
+    .ilustracion {
+        height: 270px;
+    }
+
+    .mensajes h2,
+    .seccion-torta h2 {
+        font-size: 21px;
+    }
+
+    .modal-contenido,
+    .carta-contenido {
+        padding: 45px 22px 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .caja-inicio h1 {
+        font-size: 27px;
+    }
+
+    .tarjeta-icono {
+        font-size: 32px;
+    }
+}
